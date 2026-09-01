@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "CEC2EE05-22B0-41A0-AC11-F9EE7F8C7E08",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:KeyboardCleanTool.xcodeproj",
+      "identifier" : "ABC2D1373046FF450070F11D",
+      "name" : "KeyboardCleanTool"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:KeyboardCleanTool.xcodeproj",
+        "identifier" : "ABC2D1443046FF460070F11D",
+        "name" : "KeyboardCleanToolTests"
+      }
+    }
+  ],
+  "version" : 1
+}
