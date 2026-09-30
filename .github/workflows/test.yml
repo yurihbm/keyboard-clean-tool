@@ -8,10 +8,7 @@ on:
 
 jobs:
   test:
-    runs-on: xcode-27
-
-    steps:
-      - uses: actions/checkout@v7
-
-      - name: Test
-        run: xcodebuild test -project KeyboardCleanTool.xcodeproj -scheme KeyboardCleanTool -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO
+    uses: yurihbm/homebrew-app-release/.github/workflows/test.yml@aeecc50f0e87ca0d8f22203eacbe06afe221201c # v1.0.0
+    with:
+      project: KeyboardCleanTool.xcodeproj
+      scheme: KeyboardCleanTool
