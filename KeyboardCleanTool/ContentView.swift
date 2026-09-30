@@ -17,7 +17,8 @@ struct ContentView: View {
 
                 Text(
                     blocker.isBlocking
-                        ? "Keyboard is disabled" : "Keyboard is active"
+                        ? String(localized: "keyboard.status.disabled", defaultValue: "Keyboard is disabled")
+                        : String(localized: "keyboard.status.active", defaultValue: "Keyboard is active")
                 )
                 .font(.title2.weight(.semibold))
 
@@ -31,7 +32,10 @@ struct ContentView: View {
                             .foregroundStyle(.secondary)
                     } else {
                         Text(
-                            "Press ⌥⌘⇧E anytime to re-enable the keyboard."
+                            String(
+                                localized: "keyboard.hint.escape",
+                                defaultValue: "Press ⌥⌘⇧E anytime to re-enable the keyboard."
+                            )
                         )
                         .font(.footnote)
                         .foregroundStyle(.secondary)
@@ -65,8 +69,8 @@ struct ContentView: View {
         } label: {
             Text(
                 blocker.isBlocking
-                    ? "Stop Cleaning Mode"
-                    : "Start Cleaning Mode"
+                    ? String(localized: "cleaning.button.stop", defaultValue: "Stop Cleaning Mode")
+                    : String(localized: "cleaning.button.start", defaultValue: "Start Cleaning Mode")
             )
             .font(.headline)
             .frame(width: 196, height: 40)
@@ -84,7 +88,10 @@ struct ContentView: View {
     private var permissionPrompt: some View {
         VStack(spacing: 12) {
             Text(
-                "Accessibility permission is required to intercept keyboard input."
+                String(
+                    localized: "permission.prompt",
+                    defaultValue: "Accessibility permission is required to intercept keyboard input."
+                )
             )
             .font(.subheadline)
             .multilineTextAlignment(.center)
@@ -93,7 +100,7 @@ struct ContentView: View {
             Button {
                 blocker.requestAccessibilityPermission()
             } label: {
-                Text("Grant Permission")
+                Text(String(localized: "permission.button.grant", defaultValue: "Grant Permission"))
                     .padding(.horizontal, 20)
                     .padding(.vertical, 10)
                     .contentShape(.capsule)

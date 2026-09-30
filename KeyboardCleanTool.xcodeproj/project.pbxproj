@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		AB481D7730472D8500F555CB /* KeyboardCleanToolTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = KeyboardCleanToolTests; sourceTree = "<group>"; };
-		ABC2D1383046FF450070F11D /* KeyboardCleanTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardCleanTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC2D1383046FF450070F11D /* KeyboardCleanTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = KeyboardCleanTool.app; path = "Keyboard Clean Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC2D1453046FF460070F11D /* KeyboardCleanToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardCleanToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +144,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"pt-BR",
 				Base,
 			);
 			mainGroup = ABC2D12F3046FF450070F11D;

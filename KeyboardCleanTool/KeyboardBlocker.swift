@@ -25,7 +25,7 @@ final class KeyboardBlocker {
         lastError = nil
 
         guard hasAccessibilityPermission else {
-            lastError = "Accessibility permission is required."
+            lastError = String(localized: "error.accessibility_required", defaultValue: "Accessibility permission is required.")
             return
         }
 
@@ -48,7 +48,7 @@ final class KeyboardBlocker {
             callback: callback,
             userInfo: Unmanaged.passUnretained(self).toOpaque()
         ) else {
-            lastError = "Failed to start keyboard capture."
+            lastError = String(localized: "error.capture_failed", defaultValue: "Failed to start keyboard capture.")
             return
         }
 
