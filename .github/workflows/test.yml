@@ -1,0 +1,17 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: xcode-27
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Test
+        run: xcodebuild test -project KeyboardCleanTool.xcodeproj -scheme KeyboardCleanTool -destination 'platform=macOS' CODE_SIGNING_ALLOWED=NO

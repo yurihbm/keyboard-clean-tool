@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: xcode-27
+    environment: main
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Archive
+        run: xcodebuild -project KeyboardCleanTool.xcodeproj -scheme KeyboardCleanTool -configuration Release -archivePath build/KeyboardCleanTool.xcarchive CODE_SIGNING_ALLOWED=NO archive
+
+      - name: Zip .app
+        run: ditto -c -k --sequesterRsrc --keepParent build/KeyboardCleanTool.xcarchive/Products/Applications/KeyboardCleanTool.app KeyboardCleanTool.zip
+
+      - name: Create release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: KeyboardCleanTool.zip
+          generate_release_notes: true
+
+      - name: Update Homebrew cask
+        env:
+          GH_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          SHA256=$(shasum -a 256 KeyboardCleanTool.zip | cut -d ' ' -f1)
+
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/yurihbm/homebrew-apps.git" tap
+          cd tap
+
+          sed -i '' "s/version \".*\"/version \"$VERSION\"/" Casks/keyboard-clean-tool.rb
+          sed -i '' "s/sha256 \".*\"/sha256 \"$SHA256\"/" Casks/keyboard-clean-tool.rb
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "keyboard-clean-tool $VERSION" || exit 0
+          git push
