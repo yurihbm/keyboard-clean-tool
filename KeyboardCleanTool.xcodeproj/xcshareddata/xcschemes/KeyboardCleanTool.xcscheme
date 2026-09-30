@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ABC2D1373046FF450070F11D"
-               BuildableName = "KeyboardCleanTool.app"
+               BuildableName = "Keyboard Clean Tool.app"
                BlueprintName = "KeyboardCleanTool"
                ReferencedContainer = "container:KeyboardCleanTool.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABC2D1373046FF450070F11D"
-            BuildableName = "KeyboardCleanTool.app"
+            BuildableName = "Keyboard Clean Tool.app"
             BlueprintName = "KeyboardCleanTool"
             ReferencedContainer = "container:KeyboardCleanTool.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ABC2D1373046FF450070F11D"
-            BuildableName = "KeyboardCleanTool.app"
+            BuildableName = "Keyboard Clean Tool.app"
             BlueprintName = "KeyboardCleanTool"
             ReferencedContainer = "container:KeyboardCleanTool.xcodeproj">
          </BuildableReference>
