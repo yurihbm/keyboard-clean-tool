@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/KeyboardCleanTool-Default-512.png" width="128" height="128" alt="Keyboard Clean Tool icon">
+  <img src="docs/icon.png" width="128" height="128" alt="Keyboard Clean Tool icon">
 </p>
 
 <h1 align="center">Keyboard Clean Tool</h1>
