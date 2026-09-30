@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		AB481D7730472D8500F555CB /* KeyboardCleanToolTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = KeyboardCleanToolTests; sourceTree = "<group>"; };
-		ABC2D1383046FF450070F11D /* KeyboardCleanTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = KeyboardCleanTool.app; path = "Keyboard Clean Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC2D1383046FF450070F11D /* KeyboardCleanTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = KeyboardCleanTool.app; path = KeyboardCleanTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC2D1453046FF460070F11D /* KeyboardCleanToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyboardCleanToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -337,7 +337,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yurihbmaciel.KeyboardCleanTool;
-				PRODUCT_NAME = "Keyboard Clean Tool";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -367,7 +367,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 26.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yurihbmaciel.KeyboardCleanTool;
-				PRODUCT_NAME = "Keyboard Clean Tool";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = macosx;
